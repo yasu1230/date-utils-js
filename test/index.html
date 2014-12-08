@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>date-utils.js unit tests</title>
+	<link rel="stylesheet" href="./lib/mocha.css">
+	<script src="./lib/chai.js"></script>
+	<script src="./lib/mocha.js"></script>
+
+	<script>
+		mocha.setup("bdd");
+		var assert = chai.assert;
+		var expect = chai.expect;
+		chai.Should();
+	</script>
+	<script src="../src/date-utils.js" data-cover></script>
+	<script src="../test/date-utils.test.js"></script>
+</head>
+<body>
+	<div id="mocha"></div>
+	<script>
+		mocha.checkLeaks();
+		if(window.mochaPhantomJS) {
+			mochaPhantomJS.run();
+		} else {
+			mocha.run();
+		}
+	</script>
+</body>
+</html>
